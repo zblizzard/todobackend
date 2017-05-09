@@ -3,9 +3,9 @@ import os
 
 # Disable debug
 if os.environ.get('DEBUG'):
-	DEBUG = TRUE
+	DEBUG = True
 else:
-	DEBUG = FALSE
+	DEBUG = False
 
 # Must be explicately specified when Debug is disabled
 ALLOWED_HOSTS = [os.environ.get('ALLOWED_HOSTS', '*')]
@@ -14,11 +14,11 @@ ALLOWED_HOSTS = [os.environ.get('ALLOWED_HOSTS', '*')]
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.environ.get('MYSQL_DATABASE', 'todobackend'),
-        'USER': os.environ.get('MYSQL_USER', 'todo'),
-        'PASSWORD': os.environ.get('MYSQL_PASSWORD', 'password'),
-        'HOST': os.environ.get('MYSQL_HOST', 'localhost'),
-        'PORT': os.environ.get('MYSQL_PORT', '3306'),
+        'NAME': os.environ.get('MYSQL_DATABASE','todobackend'),
+        'USER': os.environ.get('MYSQL_USER','todo'),
+        'PASSWORD': os.environ.get('MYSQL_PASSWORD','password'),
+        'HOST': os.environ.get('MYSQL_HOST','localhost'),
+        'PORT': os.environ.get('MYSQL_PORT','3306'),
     }
 }
 
