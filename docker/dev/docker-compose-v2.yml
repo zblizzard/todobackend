@@ -26,7 +26,7 @@ services:
     builder:
         build: 
             context: ../../
-            dockerfile: docker/dev/dockerfile            
+            dockerfile: docker/dev/Dockerfile            
         volumes:
             - build:/build
         entrypoint: "entrypoint.sh"
